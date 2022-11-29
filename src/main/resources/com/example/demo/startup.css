@@ -1,0 +1,10 @@
+.startup_pane{
+	-fx-background-image: url("sudokuBackground.png");
+	-fx-background-repeat: no-repeat;
+}
+.button{
+	-fx-background-color:#F4C6EE;
+}
+.button:hover{
+	-fx-background-color:#ebdfdf;
+}

@@ -1,0 +1,9 @@
+.startup_pane{
+	-fx-background-color: #	6495ED;
+}
+.button{
+	-fx-background-color:#8A2BE2;
+}
+.button:hover{
+	-fx-background-color:#ebdfdf;
+}

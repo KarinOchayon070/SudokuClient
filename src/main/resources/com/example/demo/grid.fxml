@@ -6,102 +6,351 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="654.0" prefWidth="888.0" styleClass="base_pane" stylesheets="@grid.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.GridController">
     <children>
 
-      <TextField layoutX="31.0" layoutY="133.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="97.0" layoutY="133.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="161.0" layoutY="133.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="31.0" layoutY="186.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="97.0" layoutY="186.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="161.0" layoutY="186.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="161.0" layoutY="241.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="97.0" layoutY="241.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="31.0" layoutY="241.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="32.0" layoutY="300.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="98.0" layoutY="300.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="162.0" layoutY="300.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="32.0" layoutY="353.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="98.0" layoutY="353.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="162.0" layoutY="353.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="162.0" layoutY="408.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="98.0" layoutY="408.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="32.0" layoutY="408.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="32.0" layoutY="471.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="98.0" layoutY="471.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="162.0" layoutY="471.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="32.0" layoutY="524.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="98.0" layoutY="524.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="162.0" layoutY="524.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="162.0" layoutY="579.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="98.0" layoutY="579.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="32.0" layoutY="579.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="231.0" layoutY="133.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="297.0" layoutY="133.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="361.0" layoutY="133.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="231.0" layoutY="186.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="297.0" layoutY="186.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="361.0" layoutY="186.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="361.0" layoutY="241.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="297.0" layoutY="241.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="231.0" layoutY="241.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="232.0" layoutY="300.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="298.0" layoutY="300.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="362.0" layoutY="300.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="232.0" layoutY="353.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="298.0" layoutY="353.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="362.0" layoutY="353.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="362.0" layoutY="408.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="298.0" layoutY="408.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="232.0" layoutY="408.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="232.0" layoutY="471.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="298.0" layoutY="471.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="362.0" layoutY="471.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="232.0" layoutY="524.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="298.0" layoutY="524.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="362.0" layoutY="524.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="362.0" layoutY="579.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="298.0" layoutY="579.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="232.0" layoutY="579.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="430.0" layoutY="133.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="496.0" layoutY="133.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="560.0" layoutY="133.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="430.0" layoutY="186.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="496.0" layoutY="186.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="560.0" layoutY="186.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="560.0" layoutY="241.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="496.0" layoutY="241.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="430.0" layoutY="241.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="431.0" layoutY="300.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="497.0" layoutY="300.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="561.0" layoutY="300.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="431.0" layoutY="353.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="497.0" layoutY="353.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="561.0" layoutY="353.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="561.0" layoutY="408.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="497.0" layoutY="408.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="431.0" layoutY="408.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="431.0" layoutY="471.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="497.0" layoutY="471.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="561.0" layoutY="471.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="431.0" layoutY="524.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="497.0" layoutY="524.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="561.0" layoutY="524.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="561.0" layoutY="579.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="497.0" layoutY="579.0" prefHeight="44.0" prefWidth="58.0" />
-      <TextField layoutX="431.0" layoutY="579.0" prefHeight="44.0" prefWidth="58.0" />
-      <Line endX="456.0" layoutX="161.0" layoutY="292.0" startX="-126.0" stroke="#0a0a0a" />
+      <TextField id="btn00" fx:id="btn00" accessibleText="0" alignment="CENTER" layoutX="32.0" layoutY="135.0" prefHeight="44.0" prefWidth="58.0" promptText="0" stylesheets="@grid.css" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn01" fx:id="btn01" alignment="CENTER" layoutX="98.0" layoutY="135.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn02" fx:id="btn02" alignment="CENTER" layoutX="162.0" layoutY="135.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn10" fx:id="btn10" alignment="CENTER" layoutX="34.0" layoutY="190.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn11" fx:id="btn11" alignment="CENTER" layoutX="100.0" layoutY="190.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn12" fx:id="btn12" alignment="CENTER" layoutX="164.0" layoutY="190.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn22" fx:id="btn22" alignment="CENTER" layoutX="164.0" layoutY="245.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn21" fx:id="btn21" alignment="CENTER" layoutX="100.0" layoutY="245.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn20" fx:id="btn20" alignment="CENTER" layoutX="34.0" layoutY="245.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn30" fx:id="btn30" alignment="CENTER" layoutX="31.0" layoutY="301.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn31" fx:id="btn31" alignment="CENTER" layoutX="97.0" layoutY="301.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn32" fx:id="btn32" alignment="CENTER" layoutX="161.0" layoutY="301.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn40" fx:id="btn40" alignment="CENTER" layoutX="31.0" layoutY="354.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn41" fx:id="btn41" alignment="CENTER" layoutX="97.0" layoutY="354.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn42" fx:id="btn42" alignment="CENTER" layoutX="161.0" layoutY="354.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn52" fx:id="btn52" alignment="CENTER" layoutX="161.0" layoutY="409.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn51" fx:id="btn51" alignment="CENTER" layoutX="100.0" layoutY="410.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn50" fx:id="btn50" alignment="CENTER" layoutX="34.0" layoutY="410.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn60" fx:id="btn60" alignment="CENTER" layoutX="34.0" layoutY="473.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn61" fx:id="btn61" alignment="CENTER" layoutX="100.0" layoutY="473.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn62" fx:id="btn62" alignment="CENTER" layoutX="164.0" layoutY="473.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn70" fx:id="btn70" alignment="CENTER" layoutX="34.0" layoutY="526.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn71" fx:id="btn71" alignment="CENTER" layoutX="100.0" layoutY="526.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn72" fx:id="btn72" alignment="CENTER" layoutX="164.0" layoutY="526.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn82" fx:id="btn82" alignment="CENTER" layoutX="162.0" layoutY="579.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn81" fx:id="btn81" alignment="CENTER" layoutX="98.0" layoutY="579.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn80" fx:id="btn80" alignment="CENTER" layoutX="32.0" layoutY="579.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn03" fx:id="btn03" alignment="CENTER" layoutX="232.0" layoutY="135.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn04" fx:id="btn04" alignment="CENTER" layoutX="298.0" layoutY="135.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn05" fx:id="btn05" alignment="CENTER" layoutX="362.0" layoutY="135.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn13" fx:id="btn13" alignment="CENTER" layoutX="234.0" layoutY="190.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn14" fx:id="btn14" alignment="CENTER" layoutX="300.0" layoutY="190.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn15" fx:id="btn15" alignment="CENTER" layoutX="364.0" layoutY="190.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn25" fx:id="btn25" alignment="CENTER" layoutX="364.0" layoutY="245.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn24" fx:id="btn24" alignment="CENTER" layoutX="300.0" layoutY="245.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn23" fx:id="btn23" alignment="CENTER" layoutX="234.0" layoutY="245.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn33" fx:id="btn33" alignment="CENTER" layoutX="231.0" layoutY="301.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn34" fx:id="btn34" alignment="CENTER" layoutX="297.0" layoutY="301.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn35" fx:id="btn35" alignment="CENTER" layoutX="361.0" layoutY="301.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn43" fx:id="btn43" alignment="CENTER" layoutX="231.0" layoutY="354.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn44" fx:id="btn44" alignment="CENTER" layoutX="297.0" layoutY="354.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn45" fx:id="btn45" alignment="CENTER" layoutX="361.0" layoutY="354.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn55" fx:id="btn55" alignment="CENTER" layoutX="361.0" layoutY="409.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn54" fx:id="btn54" alignment="CENTER" layoutX="297.0" layoutY="409.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn53" fx:id="btn53" alignment="CENTER" layoutX="231.0" layoutY="409.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn63" fx:id="btn63" alignment="CENTER" layoutX="234.0" layoutY="473.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn64" fx:id="btn64" alignment="CENTER" layoutX="300.0" layoutY="473.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn65" fx:id="btn65" alignment="CENTER" layoutX="364.0" layoutY="473.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn73" fx:id="btn73" alignment="CENTER" layoutX="234.0" layoutY="526.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn74" fx:id="btn74" alignment="CENTER" layoutX="300.0" layoutY="526.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn75" fx:id="btn75" alignment="CENTER" layoutX="364.0" layoutY="526.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn85" fx:id="btn85" alignment="CENTER" layoutX="362.0" layoutY="579.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn84" fx:id="btn84" alignment="CENTER" layoutX="298.0" layoutY="579.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn83" fx:id="btn83" alignment="CENTER" layoutX="232.0" layoutY="579.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn06" fx:id="btn06" alignment="CENTER" layoutX="431.0" layoutY="135.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn07" fx:id="btn07" alignment="CENTER" layoutX="497.0" layoutY="135.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn08" fx:id="btn08" alignment="CENTER" layoutX="561.0" layoutY="135.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn16" fx:id="btn16" alignment="CENTER" layoutX="433.0" layoutY="190.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn17" fx:id="btn17" alignment="CENTER" layoutX="499.0" layoutY="190.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn18" fx:id="btn18" alignment="CENTER" layoutX="563.0" layoutY="190.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn28" fx:id="btn28" alignment="CENTER" layoutX="559.0" layoutY="242.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn27" fx:id="btn27" alignment="CENTER" layoutX="495.0" layoutY="242.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn26" fx:id="btn26" alignment="CENTER" layoutX="429.0" layoutY="242.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn36" fx:id="btn36" alignment="CENTER" layoutX="430.0" layoutY="301.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn37" fx:id="btn37" alignment="CENTER" layoutX="496.0" layoutY="301.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn38" fx:id="btn38" alignment="CENTER" layoutX="560.0" layoutY="301.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn46" fx:id="btn46" alignment="CENTER" layoutX="430.0" layoutY="354.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn47" fx:id="btn47" alignment="CENTER" layoutX="496.0" layoutY="354.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn48" fx:id="btn48" alignment="CENTER" layoutX="560.0" layoutY="354.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn58" fx:id="btn58" alignment="CENTER" layoutX="560.0" layoutY="409.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn57" fx:id="btn57" alignment="CENTER" layoutX="496.0" layoutY="409.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn56" fx:id="btn56" alignment="CENTER" layoutX="430.0" layoutY="409.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn66" fx:id="btn66" alignment="CENTER" layoutX="433.0" layoutY="473.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn67" fx:id="btn67" alignment="CENTER" layoutX="499.0" layoutY="473.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn68" fx:id="btn68" alignment="CENTER" layoutX="563.0" layoutY="473.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn76" fx:id="btn76" alignment="CENTER" layoutX="431.0" layoutY="524.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn77" fx:id="btn77" alignment="CENTER" layoutX="497.0" layoutY="524.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn78" fx:id="btn78" alignment="CENTER" layoutX="561.0" layoutY="524.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn88" fx:id="btn88" alignment="CENTER" layoutX="561.0" layoutY="579.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn87" fx:id="btn87" alignment="CENTER" layoutX="497.0" layoutY="579.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField id="btn86" fx:id="btn86" alignment="CENTER" layoutX="431.0" layoutY="579.0" prefHeight="44.0" prefWidth="58.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Line endX="456.0" layoutX="161.0" layoutY="293.0" startX="-126.0" stroke="#0a0a0a" />
       <Line endX="456.0" layoutX="162.0" layoutY="463.0" startX="-126.0" stroke="#0a0a0a" />
-      <Line endX="54.0" endY="149.0" layoutX="172.0" layoutY="473.0" startX="54.0" startY="-337.0" stroke="#0a0a0a" />
-      <Line endX="54.0" endY="149.0" layoutX="371.0" layoutY="473.0" startX="54.0" startY="-337.0" stroke="#0a0a0a" />
-      <Button layoutX="684.0" layoutY="425.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="158.0" stylesheets="@grid.css" text="Solve Using CrossHatching" />
-      <Button layoutX="684.0" layoutY="497.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="158.0" stylesheets="@grid.css" text="Solve Using DFS" />
-      <Button layoutX="684.0" layoutY="568.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="158.0" stylesheets="@grid.css" text="Reset" />
+      <Line endX="54.0" endY="149.0" layoutX="173.0" layoutY="473.0" startX="54.0" startY="-337.0" stroke="#0a0a0a" />
+      <Line endX="54.0" endY="149.0" layoutX="372.0" layoutY="473.0" startX="54.0" startY="-337.0" stroke="#0a0a0a" />
+      <Button layoutX="684.0" layoutY="435.0" mnemonicParsing="false" onAction="#onActionSolve" prefHeight="55.0" prefWidth="158.0" stylesheets="@grid.css" text="Solve Using CrossHatching" />
+      <Button layoutX="684.0" layoutY="369.0" mnemonicParsing="false" onAction="#onActionSolve" prefHeight="55.0" prefWidth="158.0" stylesheets="@grid.css" text="Solve Using DFS" />
+      <Button layoutX="684.0" layoutY="568.0" mnemonicParsing="false" onAction="#onActionReset" prefHeight="55.0" prefWidth="158.0" stylesheets="@grid.css" text="Reset" />
       <ImageView fitHeight="111.0" fitWidth="851.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@header.png" />
          </image>
       </ImageView>
+      <Line endX="456.0" layoutX="161.0" layoutY="127.0" startX="-126.0" stroke="#0a0a0a" />
+      <Line endX="54.0" endY="149.0" layoutX="-28.0" layoutY="469.0" startX="54.0" startY="-337.0" stroke="#0a0a0a" />
+      <Line endX="54.0" endY="149.0" layoutX="573.0" layoutY="469.0" startX="54.0" startY="-337.0" stroke="#0a0a0a" />
+      <Line endX="456.0" layoutX="161.0" layoutY="630.0" startX="-126.0" stroke="#0a0a0a" />
+      <Button layoutX="684.0" layoutY="503.0" mnemonicParsing="false" onAction="#onActionCheckBoard" prefHeight="55.0" prefWidth="158.0" stylesheets="@grid.css" text="Check Board" />
     </children>
 </Pane>

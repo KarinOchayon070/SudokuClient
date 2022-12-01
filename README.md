@@ -8,6 +8,8 @@ In the beginning, some slots have numbers, and the player tries to complete the 
 (2) Each column can only contain numbers from 1 to 9 once.
 (3) Each row must contain numbers from 1 to 9 once.
 (4) Each 3x3 square must contain numbers from 1 to 9 once.
+![image](https://user-images.githubusercontent.com/92684210/205090954-61a2dcc8-8638-4c5e-97c9-394d0a67930f.png)
+
 
 Backtracking Algorithm -
 In sudoKo solving Problem, we try filling digits one by one.

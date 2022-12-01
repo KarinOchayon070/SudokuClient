@@ -4,10 +4,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
+
 import java.net.URL;
 import java.util.HashSet;
 import java.util.ResourceBundle;
-
 public class GridController implements Initializable {
 
     @FXML
@@ -173,15 +174,21 @@ public class GridController implements Initializable {
     @FXML
     private TextField btn88;
 
+    @FXML
+    private Text textId;
+
 
     public boolean checkBoard(char[][] board){
-
+        //This func
         HashSet<String>seen = new HashSet<>();
          for(int i=0; i<9; i++){
              for(int j=0; j<9; j++){
                  char current_val = board[i][j];
                  if(current_val != '.'){
-                     if(!seen.add(current_val + "found in row " + i) || !seen.add(current_val + "found in column " + j) || !seen.add(current_val + "found in submatrix " + i/3 + j/3)){
+                     if(!seen.add(current_val + "found in row " + i) ||
+                             !seen.add(current_val + "found in column " + j) ||
+                             !seen.add(current_val + "found in submatrix " + i/3 + j/3)){
+
                          return false;
                      }
                  }
@@ -193,6 +200,7 @@ public class GridController implements Initializable {
     @FXML
     void onActionReset(ActionEvent event){
 
+        textId.setText(" ");
 
         TextField[][] myTextFields = {
                 {btn00, btn01, btn02, btn03, btn04, btn05, btn06, btn07, btn08},
@@ -252,6 +260,8 @@ public class GridController implements Initializable {
     @FXML
     void onActionSolve(ActionEvent event){
 
+        long startTime = System.nanoTime();
+
         TextField[][] myTextFields = {
                 {btn00, btn01, btn02, btn03, btn04, btn05, btn06, btn07, btn08},
                 {btn10, btn11, btn12, btn13, btn14, btn15, btn16, btn17, btn18},
@@ -280,6 +290,11 @@ public class GridController implements Initializable {
                 System.out.println();
             }
         }
+        long stopTime = System.nanoTime();
+        long time = stopTime - startTime;
+        System.out.println(time);
+        textId.setText("This algorithm took " + String.valueOf(time) + " nanoseconds to solve the sudoku puzzle.");
+
     }
 
     public static boolean SolveSudoku(int[][] matrix, int n){

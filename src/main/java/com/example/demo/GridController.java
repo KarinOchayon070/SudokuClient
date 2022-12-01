@@ -224,7 +224,7 @@ public class GridController implements Initializable {
                 {btn40, btn41, btn42, btn43, btn44, btn45, btn46, btn47, btn48},
                 {btn50, btn51, btn52, btn53, btn54, btn55, btn56, btn57, btn58},
                 {btn60, btn61, btn62, btn63, btn64, btn65, btn66, btn67, btn68},
-                {btn70, btn71, btn72, btn73, btn74, btn75, btn76, btn77, btn88},
+                {btn70, btn71, btn72, btn73, btn74, btn75, btn76, btn77, btn78},
                 {btn80, btn81, btn82, btn83, btn84, btn85, btn86, btn87, btn88},
         };
 
@@ -260,7 +260,7 @@ public class GridController implements Initializable {
                 {btn40, btn41, btn42, btn43, btn44, btn45, btn46, btn47, btn48},
                 {btn50, btn51, btn52, btn53, btn54, btn55, btn56, btn57, btn58},
                 {btn60, btn61, btn62, btn63, btn64, btn65, btn66, btn67, btn68},
-                {btn70, btn71, btn72, btn73, btn74, btn75, btn76, btn77, btn88},
+                {btn70, btn71, btn72, btn73, btn74, btn75, btn76, btn77, btn78},
                 {btn80, btn81, btn82, btn83, btn84, btn85, btn86, btn87, btn88},
         };
 

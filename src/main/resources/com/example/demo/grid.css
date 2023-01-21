@@ -1,8 +1,26 @@
 
-.base_pane {
-	 -fx-background-color: #FFFFFF;
-
+.grid-pane {
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-border-insets: 0.5;
 }
+
+.grid-pane .grid-cell:nth-child(3n) {
+    -fx-border-right-color: black;
+    -fx-border-right-width: 2px;
+}
+.grid-pane .grid-cell:nth-last-child(-n+3) {
+-fx-border-bottom-color: black;
+-fx-border-bottom-width: 2px;
+}
+
+.grid-pane .grid-cell:nth-child(3n+1) {
+-fx-border-bottom-color: black;
+-fx-border-bottom-width: 2px;
+-fx-border-right-color: black;
+-fx-border-right-width: 2px;
+}
+
 
 
 .button {

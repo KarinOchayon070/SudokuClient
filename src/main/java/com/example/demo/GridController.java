@@ -1,4 +1,5 @@
 package com.example.demo;
+import client.Client;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -57,11 +58,19 @@ public class GridController implements Initializable {
         System.out.println();
     }
 
+
     @FXML
     void onActionSolve(ActionEvent event){
 
     }
 
+    @FXML
+    void getByDifficulty(ActionEvent event){
+        Client client = new Client();
+        client.getTemplateByDifficulty("Easy");
+
+
+    }
 
     void render(){
         GridPane grid = (GridPane) pane.lookup("#grid");
@@ -90,6 +99,8 @@ public class GridController implements Initializable {
         GridPane grid = new GridPane();
         grid.setId("grid");
         grid.setAlignment(Pos.CENTER);
+        grid.getStyleClass().add("grid-pane");
+
 
         for(int i = 0; i < this.gridData.length; i++) {
             for(int j = 0; j < this.gridData[i].length; j++) {
@@ -99,6 +110,8 @@ public class GridController implements Initializable {
 
                 textField.setAlignment(Pos.CENTER);
                 textField.setPrefSize(50,50);
+                textField.getStyleClass().add("grid-cell");
+
 
                 textField.textProperty().addListener((obs, oldValue, newValue)->{
                     if ((newValue.matches("\\d*") || newValue == "") && newValue.length() <= 1) {

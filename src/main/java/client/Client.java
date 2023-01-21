@@ -3,18 +3,25 @@ package client;
 import java.io.PrintWriter;
 import java.lang.reflect.Type;
 import java.net.Socket;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
+
 
 public class Client {
     public Gson gson = new GsonBuilder().create();
-    ;
+
     public PrintWriter writer;
     public Response response;
     public Request request;
     public Scanner reader;
     public Socket toServer;
     public int port = 6000;
+
+    public Client(){}
 
     public Response sendRequest(Map<String, String> headers, Map<String, String> body) {
         try {
@@ -36,6 +43,20 @@ public class Client {
             ex.printStackTrace();
         }
         return new Response("Error");
-
     }
+
+    public SudokuTemplate getTemplateByDifficulty(String difficulty) {
+        String command = "templateByDifficulty";
+
+        Map<String, String> headers = new HashMap<>();
+        Map<String, String> body = new HashMap<>();
+        body.put("difficulty", difficulty);
+        headers.put("action", command);
+
+            response = sendRequest(headers, body);
+
+        return response.sudokuTemplate;
+    }
+
+
 }

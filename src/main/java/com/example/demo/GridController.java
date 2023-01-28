@@ -10,13 +10,17 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 import java.net.URL;
 import java.util.Arrays;
@@ -29,6 +33,8 @@ public class GridController implements Initializable {
     private int[][] gridData;
     private SudokuTemplate sudokuTemplate = new SudokuTemplate();
     private Client client = new Client();
+
+    private ComboBox<String> difficultyComboBox;
 
 
     @FXML
@@ -102,6 +108,15 @@ public class GridController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.generateGrid();
 
+        difficultyComboBox = new ComboBox<String>();
+        difficultyComboBox.setId("difficultyComboBox");
+
+        difficultyComboBox.setPromptText("Choose Difficulty");
+        ObservableList<String> options = FXCollections.observableArrayList("Hard", "Medium", "Easy");
+        difficultyComboBox.setItems(options);
+        difficultyComboBox.setStyle("-fx-background-color: #F4C6EE;");
+       
+
         int[][] grid = sudokuTemplate.getGrid();
 
         GridPane uiGrid = new GridPane();
@@ -135,10 +150,14 @@ public class GridController implements Initializable {
 
             }
         }
+
+        uiGrid.setLayoutX(50);
+        uiGrid.setLayoutY(170);
+        difficultyComboBox.setLayoutX(700);
+        difficultyComboBox.setLayoutY(350);
+
+
         pane.getChildren().add(uiGrid);
+        pane.getChildren().add(difficultyComboBox);
     }
-
-
-
-
 }

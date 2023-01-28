@@ -23,7 +23,7 @@ public class Client {
 
     public Client(){}
 
-    public Response sendRequest(Map<String, String> headers, Map<String, String> body) {
+    public Response sendRequest(Map<String, String> headers, Map<String, Object> body) {
         try {
             toServer = new Socket("localhost", port);
             writer = new PrintWriter(toServer.getOutputStream());
@@ -49,11 +49,26 @@ public class Client {
         String command = "templateByDifficulty";
 
         Map<String, String> headers = new HashMap<>();
-        Map<String, String> body = new HashMap<>();
+        Map<String, Object> body = new HashMap<>();
         body.put("difficulty", difficulty);
         headers.put("action", command);
 
-            response = sendRequest(headers, body);
+        response = sendRequest(headers, body);
+
+        return response.sudokuTemplate;
+    }
+
+    public SudokuTemplate handleSolveSudoku(SudokuTemplate sudokuTemplate) {
+        String command = "solveSudoku";
+
+        Map<String, String> headers = new HashMap<>();
+        Map<String, Object> body = new HashMap<>();
+        body.put("grid", sudokuTemplate.getGrid());
+        body.put("difficulty", "null");
+        body.put("id", "null");
+        headers.put("action", command);
+
+        response = sendRequest(headers, body);
 
         return response.sudokuTemplate;
     }

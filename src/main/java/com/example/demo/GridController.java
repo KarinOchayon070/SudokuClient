@@ -1,5 +1,6 @@
 package com.example.demo;
 import client.Client;
+import client.SudokuTemplate;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -26,6 +27,8 @@ public class GridController implements Initializable {
     @FXML
     private Pane pane;
     private int[][] gridData;
+    private SudokuTemplate sudokuTemplate = new SudokuTemplate();
+    private Client client = new Client();
 
 
     @FXML
@@ -43,7 +46,7 @@ public class GridController implements Initializable {
             }
         }
 
-        this.gridData = tempGridData;
+        this.sudokuTemplate.setGrid(tempGridData);
     }
 
     @FXML
@@ -60,30 +63,33 @@ public class GridController implements Initializable {
 
 
     @FXML
-    void onActionSolve(ActionEvent event){
-
+    void getByDifficulty(ActionEvent event){
+        this.sudokuTemplate = this.client.getTemplateByDifficulty("Easy");
+        this.render();
     }
 
     @FXML
-    void getByDifficulty(ActionEvent event){
-        Client client = new Client();
-        client.getTemplateByDifficulty("Easy");
-
-
+    void handleSolveSudoku(ActionEvent event){
+        this.sudokuTemplate = client.handleSolveSudoku(this.sudokuTemplate);
+        this.render();
     }
 
-    void render(){
-        GridPane grid = (GridPane) pane.lookup("#grid");
 
-        for (int i = 0; i < this.gridData.length; i++) {
-            for (int j = 0; j < this.gridData[i].length; j++) {
+
+    void render(){
+        GridPane uiGrid = (GridPane) pane.lookup("#grid");
+
+        int[][] grid = sudokuTemplate.getGrid();
+
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[i].length; j++) {
                 // get the node at the current grid cell
-                TextField textfield = (TextField) grid.getChildren().get(i * this.gridData[i].length + j);
-                if(this.gridData[i][j] == 0){
+                TextField textfield = (TextField) uiGrid.getChildren().get(i * grid[i].length + j);
+                if(grid[i][j] == 0){
                     textfield.setText("");
                 }
                 else{
-                    textfield.setText(String.valueOf(this.gridData[i][j]));
+                    textfield.setText(String.valueOf(grid[i][j]));
                 }
             }
         }
@@ -96,14 +102,16 @@ public class GridController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.generateGrid();
 
-        GridPane grid = new GridPane();
-        grid.setId("grid");
-        grid.setAlignment(Pos.CENTER);
-        grid.getStyleClass().add("grid-pane");
+        int[][] grid = sudokuTemplate.getGrid();
+
+        GridPane uiGrid = new GridPane();
+        uiGrid.setId("grid");
+        uiGrid.setAlignment(Pos.CENTER);
+        uiGrid.getStyleClass().add("grid-pane");
 
 
-        for(int i = 0; i < this.gridData.length; i++) {
-            for(int j = 0; j < this.gridData[i].length; j++) {
+        for(int i = 0; i < grid.length; i++) {
+            for(int j = 0; j < grid[i].length; j++) {
                 TextField textField = new TextField();
                 int finalI = i;
                 int finalJ = j;
@@ -117,17 +125,17 @@ public class GridController implements Initializable {
                     if ((newValue.matches("\\d*") || newValue == "") && newValue.length() <= 1) {
                         int finalValue = newValue.equals("") ? 0 : Integer.parseInt(newValue);
 
-                        this.gridData[finalI][finalJ] = finalValue;
+                        this.sudokuTemplate.setGridPoint(finalI,finalJ,finalValue);
                     }
 
                     this.render();
 
                 });
-                grid.add(textField, j, i);
+                uiGrid.add(textField, j, i);
 
             }
         }
-        pane.getChildren().add(grid);
+        pane.getChildren().add(uiGrid);
     }
 
 

@@ -9,10 +9,7 @@ public class SudokuTemplate implements Serializable {
     private String difficulty;
     private int[][] grid;
 
-    public SudokuTemplate(int[][] grid) {
-        super();
-        this.grid = grid;
-    }
+    public SudokuTemplate() {}
 
     public String getId() {
         return this.id;
@@ -32,6 +29,10 @@ public class SudokuTemplate implements Serializable {
 
     public void setGrid(int[][] grid) {
         this.grid = grid;
+    }
+
+    public void setGridPoint(int i, int j, int value) {
+        this.grid[i][j] = value;
     }
 
     public void setDifficulty(String difficulty) {

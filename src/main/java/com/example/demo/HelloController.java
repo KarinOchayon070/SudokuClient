@@ -16,7 +16,6 @@ public class HelloController implements Initializable {
     @FXML
     private Stage stage;
     private Scene scene;
-    private Parent root;
 
 
 

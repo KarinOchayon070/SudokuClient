@@ -22,6 +22,7 @@ import javafx.stage.Stage;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -30,7 +31,6 @@ public class GridController implements Initializable {
 
     @FXML
     private Pane pane;
-    private int[][] gridData;
     private SudokuTemplate sudokuTemplate = new SudokuTemplate();
     private Client client = new Client();
 
@@ -55,29 +55,38 @@ public class GridController implements Initializable {
         this.sudokuTemplate.setGrid(tempGridData);
     }
 
-    @FXML
-    void onActionCheckBoard(ActionEvent event){
-        for (int i = 0; i < this.gridData.length; i++) {
-            for (int j = 0; j < this.gridData[i].length; j++) {
-                System.out.print(this.gridData[i][j] + " ");
-            }
-            System.out.println();
-        }
-
-        System.out.println();
-    }
+//    @FXML
+//    void onActionCheckBoard(ActionEvent event){
+//        for (int i = 0; i < this.gridData.length; i++) {
+//            for (int j = 0; j < this.gridData[i].length; j++) {
+//                System.out.print(this.gridData[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
+//
+//        System.out.println();
+//    }
 
 
     @FXML
     void getByDifficulty(ActionEvent event){
-        this.sudokuTemplate = this.client.getTemplateByDifficulty("Easy");
-        this.render();
+        String difficulty = difficultyComboBox.getValue();
+        try {
+            this.sudokuTemplate = this.client.getTemplateByDifficulty(difficulty);
+            this.render();
+        } catch(IOException e){
+            new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
+        }
     }
 
     @FXML
     void handleSolveSudoku(ActionEvent event){
-        this.sudokuTemplate = client.handleSolveSudoku(this.sudokuTemplate);
-        this.render();
+        try{
+            this.sudokuTemplate = client.handleSolveSudoku(this.sudokuTemplate);
+            this.render();
+        } catch(IOException e){
+            new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
+        }
     }
 
 
@@ -114,6 +123,9 @@ public class GridController implements Initializable {
         difficultyComboBox.setPromptText("Choose Difficulty");
         ObservableList<String> options = FXCollections.observableArrayList("Hard", "Medium", "Easy");
         difficultyComboBox.setItems(options);
+        difficultyComboBox.getStyleClass().add("button");
+
+
         difficultyComboBox.setStyle("-fx-background-color: #F4C6EE;");
        
 
@@ -135,6 +147,22 @@ public class GridController implements Initializable {
                 textField.setPrefSize(50,50);
                 textField.getStyleClass().add("grid-cell");
 
+                boolean shouldVertical = (i + 1) % 3 == 0 && i != 8;
+                boolean shouldHorizontal = (j) % 3 == 0 && j != 0;
+                boolean shouldBoth = shouldVertical && shouldHorizontal;
+
+                if(shouldBoth){
+                    textField.getStyleClass().add("border-both");
+                }
+
+                else if(shouldVertical){
+                    textField.getStyleClass().add("border-bottom");
+                }
+
+                else if(shouldHorizontal){
+                    textField.getStyleClass().add("border-right");
+                }
+
 
                 textField.textProperty().addListener((obs, oldValue, newValue)->{
                     if ((newValue.matches("\\d*") || newValue == "") && newValue.length() <= 1) {
@@ -153,8 +181,8 @@ public class GridController implements Initializable {
 
         uiGrid.setLayoutX(50);
         uiGrid.setLayoutY(170);
-        difficultyComboBox.setLayoutX(700);
-        difficultyComboBox.setLayoutY(350);
+        difficultyComboBox.setLayoutX(525);
+        difficultyComboBox.setLayoutY(430);
 
 
         pane.getChildren().add(uiGrid);

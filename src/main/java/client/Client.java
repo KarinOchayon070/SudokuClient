@@ -1,5 +1,6 @@
 package client;
 
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.reflect.Type;
 import java.net.Socket;
@@ -23,8 +24,7 @@ public class Client {
 
     public Client(){}
 
-    public Response sendRequest(Map<String, String> headers, Map<String, Object> body) {
-        try {
+    public Response sendRequest(Map<String, String> headers, Map<String, Object> body) throws IOException {
             toServer = new Socket("localhost", port);
             writer = new PrintWriter(toServer.getOutputStream());
             reader = new Scanner(toServer.getInputStream());
@@ -38,14 +38,15 @@ public class Client {
             writer.close();
             reader.close();
             toServer.close();
+
+            if(response.success == false){
+                throw new IOException(response.message);
+            }
+
             return response;
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-        return new Response("Error");
     }
 
-    public SudokuTemplate getTemplateByDifficulty(String difficulty) {
+    public SudokuTemplate getTemplateByDifficulty(String difficulty) throws IOException {
         String command = "templateByDifficulty";
 
         Map<String, String> headers = new HashMap<>();
@@ -58,7 +59,7 @@ public class Client {
         return response.sudokuTemplate;
     }
 
-    public SudokuTemplate handleSolveSudoku(SudokuTemplate sudokuTemplate) {
+    public SudokuTemplate handleSolveSudoku(SudokuTemplate sudokuTemplate) throws IOException {
         String command = "solveSudoku";
 
         Map<String, String> headers = new HashMap<>();

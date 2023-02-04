@@ -7,26 +7,30 @@
 
 }
 
-.grid-pane .grid-cell:nth-child(3n) {
-    -fx-border-right-color: black;
-    -fx-border-right-width: 2px;
-}
-.grid-pane .grid-cell:nth-last-child(-n+3) {
--fx-border-bottom-color: black;
--fx-border-bottom-width: 2px;
+.border-both {
+    -fx-border-width: 0 0 2px 2px;
+    -fx-border-color: black;
+    -fx-border-style: solid;
 }
 
-.grid-pane .grid-cell:nth-child(3n+1) {
--fx-border-bottom-color: black;
--fx-border-bottom-width: 2px;
--fx-border-right-color: black;
--fx-border-right-width: 2px;
+.border-bottom {
+    -fx-border-width: 0 0 2px 0;
+    -fx-border-color: black;
+    -fx-border-style: solid;
 }
+
+.border-right {
+    -fx-border-width: 0 0 0 2px;
+    -fx-border-color: black;
+    -fx-border-style: solid;
+}
+
 
 .button {
 	 -fx-background-color: #F4C6EE;
-
+	 border-radius: 10px;
 }
+
 .button:hover {
 	 -fx-background-color: #ebdfdf;
 }

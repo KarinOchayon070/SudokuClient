@@ -26,7 +26,7 @@
       </Text>
 
 
-      <Button fx:id="getBtn" layoutX="684.0" layoutY="429.0" mnemonicParsing="false" onAction="#getByDifficulty" prefHeight="55.0" prefWidth="158.0" stylesheets="@grid.css" text="Get" />
+      <Button fx:id="getBtn" layoutX="684.0" layoutY="429.0" mnemonicParsing="false" onAction="#getByDifficulty" prefHeight="55.0" prefWidth="158.0" stylesheets="@grid.css" text="Generate Board" />
 
     </children>
 </Pane>

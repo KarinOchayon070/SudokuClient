@@ -165,8 +165,8 @@ public class GridController implements Initializable {
 
         uiGrid.setLayoutX(50);
         uiGrid.setLayoutY(170);
-        difficultyComboBox.setLayoutX(525);
-        difficultyComboBox.setLayoutY(430);
+        difficultyComboBox.setLayoutX(590);
+        difficultyComboBox.setLayoutY(440);
 
 
         pane.getChildren().add(uiGrid);

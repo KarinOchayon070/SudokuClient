@@ -121,7 +121,8 @@ public class AdminViewController implements Initializable {
 
                 ScrollPane scrollPane = new ScrollPane();
                 scrollPane.setPrefSize(888,500);
-                scrollPane.setLayoutY(160);
+                scrollPane.setLayoutY(170);
+                scrollPane.setLayoutX(80);
 
                 scrollPane.setContent(containerBox);
                 pane.getChildren().add(scrollPane);

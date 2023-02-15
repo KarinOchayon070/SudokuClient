@@ -1,38 +1,34 @@
-package com.example.demo;
-import client.Client;
-import client.SudokuTemplate;
+package com.hit.controller;
+import com.hit.client.SudokuTemplate;
+import com.hit.model.SudokuTemplatesModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-import javafx.scene.text.Text;
-import javafx.stage.Stage;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.ResourceBundle;
 public class GridController implements Initializable {
 
     @FXML
     private Pane pane;
+    private Stage stage;
+    private Scene scene;
     private SudokuTemplate sudokuTemplate = new SudokuTemplate();
-    private Client client = new Client();
+    private SudokuTemplatesModel sudokuTemplatesModel = new SudokuTemplatesModel();
 
     private ComboBox<String> difficultyComboBox;
 
@@ -55,24 +51,12 @@ public class GridController implements Initializable {
         this.sudokuTemplate.setGrid(tempGridData);
     }
 
-//    @FXML
-//    void onActionCheckBoard(ActionEvent event){
-//        for (int i = 0; i < this.gridData.length; i++) {
-//            for (int j = 0; j < this.gridData[i].length; j++) {
-//                System.out.print(this.gridData[i][j] + " ");
-//            }
-//            System.out.println();
-//        }
-//
-//        System.out.println();
-//    }
-
 
     @FXML
     void getByDifficulty(ActionEvent event){
         String difficulty = difficultyComboBox.getValue();
         try {
-            this.sudokuTemplate = this.client.getTemplateByDifficulty(difficulty);
+            this.sudokuTemplate = this.sudokuTemplatesModel.getTemplateByDifficulty(difficulty);
             this.render();
         } catch(IOException e){
             new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
@@ -82,7 +66,7 @@ public class GridController implements Initializable {
     @FXML
     void handleSolveSudoku(ActionEvent event){
         try{
-            this.sudokuTemplate = client.handleSolveSudoku(this.sudokuTemplate);
+            this.sudokuTemplate = sudokuTemplatesModel.handleSolveSudoku(this.sudokuTemplate);
             this.render();
         } catch(IOException e){
             new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
@@ -188,4 +172,15 @@ public class GridController implements Initializable {
         pane.getChildren().add(uiGrid);
         pane.getChildren().add(difficultyComboBox);
     }
+
+
+    @FXML
+    public void handleGoBack(ActionEvent event) throws IOException {
+        Parent root = (Parent) FXMLLoader.load(getClass().getResource("/com/hit/view/on-boarding.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
 }

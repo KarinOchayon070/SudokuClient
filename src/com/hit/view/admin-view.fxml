@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="741.0" prefWidth="1173.0" style="-fx-background-color: white;" styleClass="base_pane" stylesheets="@grid.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hit.controller.AdminViewController">
+   <children>
+      <ImageView fitHeight="741.0" fitWidth="594.0" layoutX="579.0">
+         <image>
+            <Image url="@../resources/background.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="741.0" fitWidth="583.0">
+         <image>
+            <Image url="@../resources/background.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="49.0" fitWidth="52.0" layoutX="37.0" layoutY="34.0">
+         <image>
+            <Image url="@../resources/goBack.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="136.0" fitWidth="628.0" layoutX="265.0" layoutY="27.0">
+         <image>
+            <Image url="@../resources/settingsHeader.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="17.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="58.0" prefWidth="92.0" style="-fx-background-color: transparent;" text="Button" textFill="TRANSPARENT" />
+      <ScrollPane fx:id="scrollPane" layoutX="109.0" layoutY="174.0" prefHeight="509.0" prefWidth="964.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+        </content>
+      </ScrollPane>
+   </children>
+</Pane>

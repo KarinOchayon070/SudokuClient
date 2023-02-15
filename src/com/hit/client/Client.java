@@ -1,10 +1,11 @@
-package client;
+package com.hit.client;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.reflect.Type;
 import java.net.Socket;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import com.google.gson.Gson;
@@ -72,6 +73,29 @@ public class Client {
         response = sendRequest(headers, body);
 
         return response.sudokuTemplate;
+    }
+
+    public List<SudokuTemplate> getAllTemplates() throws IOException {
+        String command = "getAllTemplates";
+
+        Map<String, String> headers = new HashMap<>();
+        Map<String, Object> body = new HashMap<>();
+        headers.put("action", command);
+
+        response = sendRequest(headers, body);
+
+        return response.sudokuTemplates;
+    }
+
+    public void deleteByID(String id) throws IOException {
+        String command = "deleteByID";
+
+        Map<String, String> headers = new HashMap<>();
+        Map<String, Object> body = new HashMap<>();
+        body.put("id",id);
+        headers.put("action", command);
+
+        response = sendRequest(headers, body);
     }
 
 

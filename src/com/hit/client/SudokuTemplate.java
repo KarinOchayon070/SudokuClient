@@ -1,4 +1,4 @@
-package client;
+package com.hit.client;
 
 import java.io.Serializable;
 

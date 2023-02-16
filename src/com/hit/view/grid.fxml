@@ -10,17 +10,17 @@
 
 <Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="713.0" prefWidth="975.0" style="-fx-background-color: white;" styleClass="base_pane" stylesheets="@grid.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hit.controller.GridController">
     <children>
-      <ImageView fitHeight="752.0" fitWidth="623.0" layoutX="-7.0" layoutY="-7.0">
+      <ImageView fitHeight="721.0" fitWidth="624.0" layoutX="-7.0" layoutY="-7.0">
          <image>
             <Image url="@../resources/background.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="769.0" fitWidth="526.0" layoutX="457.0" layoutY="-4.0">
+      <ImageView fitHeight="721.0" fitWidth="525.0" layoutX="458.0" layoutY="-4.0">
          <image>
             <Image url="@../resources/background.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="92.0" fitWidth="878.0" layoutX="80.0" layoutY="17.0">
+      <ImageView fitHeight="92.0" fitWidth="878.0" layoutX="82.0" layoutY="15.0">
          <image>
             <Image url="@../resources/headerTr.png" />
          </image>
@@ -51,12 +51,12 @@
             <Font size="14.0" />
          </font>
       </Text>
-      <ImageView fitHeight="49.0" fitWidth="52.0" layoutX="14.0" layoutY="24.0">
+      <ImageView fitHeight="49.0" fitWidth="52.0" layoutX="14.0" layoutY="14.0">
          <image>
             <Image url="@../resources/goBack.png" />
          </image>
       </ImageView>
-      <Button layoutY="16.0" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="80.0" prefWidth="92.0" style="-fx-background-color: transparent;" text="Button" textFill="TRANSPARENT" />
+      <Button layoutY="6.0" mnemonicParsing="false" onAction="#handleGoBack" prefHeight="80.0" prefWidth="92.0" style="-fx-background-color: transparent;" text="Button" textFill="TRANSPARENT" />
 
     </children>
 </Pane>

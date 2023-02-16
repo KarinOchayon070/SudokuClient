@@ -23,19 +23,15 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class AdminViewController implements Initializable {
+public class AppSettingsController implements Initializable {
     @FXML
     private Pane pane;
     private Stage stage;
     private Scene scene;
-
     private SudokuTemplatesModel sudokuTemplatesModel = new SudokuTemplatesModel();
     private List<SudokuTemplate> sudokuTemplates;
 
-
-
-
-    public AdminViewController() {
+    public AppSettingsController() {
     }
 
     public void handleDeleteTemplate(String id, HBox templateBox, VBox containerBox){
@@ -93,10 +89,6 @@ public class AdminViewController implements Initializable {
                             uiGrid.add(textField, j, i);
                         }
                     }
-
-
-
-
                 HBox templateBox = new HBox();
                 templateBox.setSpacing(30);
 
@@ -123,7 +115,7 @@ public class AdminViewController implements Initializable {
                 scrollPane.setPrefSize(888,500);
                 scrollPane.setLayoutY(170);
                 scrollPane.setLayoutX(80);
-
+                scrollPane.setStyle("-fx-background: rgb(255,255,255);\n -fx-background-color: rgb(255,255,255)");
                 scrollPane.setContent(containerBox);
                 pane.getChildren().add(scrollPane);
 
@@ -133,7 +125,6 @@ public class AdminViewController implements Initializable {
         }
     }
 
-
     @FXML
     public void handleGoBack(ActionEvent event) throws IOException {
         Parent root = (Parent) FXMLLoader.load(getClass().getResource("/com/hit/view/on-boarding.fxml"));
@@ -142,5 +133,4 @@ public class AdminViewController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-
 }

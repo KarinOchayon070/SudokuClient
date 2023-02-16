@@ -31,7 +31,7 @@
 
       <Button fx:id="getBtn" layoutX="750.0" layoutY="439.0" mnemonicParsing="false" onAction="#getByDifficulty" prefHeight="55.0" prefWidth="158.0" stylesheets="@grid.css" text="Generate Board" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4c6ee" height="241.0" layoutX="591.0" layoutY="171.0" stroke="#f4c6ee" strokeType="INSIDE" width="318.0" />
-      <Text layoutX="617.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hey there and welcome to my sudoku app!" textAlignment="CENTER" wrappingWidth="270.0">
+      <Text layoutX="607.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hey there and welcome to my sudoku app 👋" textAlignment="CENTER" wrappingWidth="289.0">
          <font>
             <Font size="14.0" />
          </font>
@@ -46,7 +46,7 @@
             <Font size="14.0" />
          </font>
       </Text>
-      <Text layoutX="695.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hope you'll enjoy!" textAlignment="CENTER">
+      <Text layoutX="695.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hope you'll enjoy 😎" textAlignment="CENTER">
          <font>
             <Font size="14.0" />
          </font>

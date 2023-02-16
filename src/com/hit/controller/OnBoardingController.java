@@ -16,9 +16,6 @@ public class OnBoardingController implements Initializable {
     @FXML
     private Stage stage;
     private Scene scene;
-
-
-
     public OnBoardingController() {
     }
 
@@ -29,7 +26,7 @@ public class OnBoardingController implements Initializable {
 
     @FXML
     public void onAdminButtonClick(ActionEvent event) throws IOException {
-        Parent root = (Parent) FXMLLoader.load(getClass().getResource("/com/hit/view/admin-view.fxml"));
+        Parent root = (Parent) FXMLLoader.load(getClass().getResource("/com/hit/view/app-settings.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -45,6 +42,4 @@ public class OnBoardingController implements Initializable {
         stage.show();
 
     }
-
-
 }

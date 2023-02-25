@@ -18,7 +18,7 @@
             <Font name="Bordeaux Roman Bold LET" size="17.0" />
         </font>
     </Button>
-    <Button layoutX="422.0" layoutY="504.0" mnemonicParsing="false" onAction="#onAdminButtonClick" prefHeight="75.0" prefWidth="126.0" stylesheets="@startup.css" text="App Settings">
+    <Button layoutX="422.0" layoutY="504.0" mnemonicParsing="false" onAction="#onAppSettingsButtonClick" prefHeight="75.0" prefWidth="126.0" stylesheets="@startup.css" text="App Settings">
         <font>
             <Font name="Bordeaux Roman Bold LET" size="17.0" />
         </font>

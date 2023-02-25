@@ -24,5 +24,4 @@ public class SudokuTemplatesModel implements Model{
     public void deleteByID(String id) throws IOException {
         client.deleteByID(id);
     }
-
 }

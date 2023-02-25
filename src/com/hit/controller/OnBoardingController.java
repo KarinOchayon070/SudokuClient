@@ -25,7 +25,7 @@ public class OnBoardingController implements Initializable {
     }
 
     @FXML
-    public void onAdminButtonClick(ActionEvent event) throws IOException {
+    public void onAppSettingsButtonClick(ActionEvent event) throws IOException {
         Parent root = (Parent) FXMLLoader.load(getClass().getResource("/com/hit/view/app-settings.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);

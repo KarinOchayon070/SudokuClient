@@ -16,3 +16,11 @@ The view defines how the app's data should be displayed (all the fxml files). Th
 The controller contains logic that updates the model and view in response to input from the users of the app.
 
 ![image](https://user-images.githubusercontent.com/92684210/219619868-b7aabad4-0790-4be0-8ebd-aafe3d8ebc49.png)
+
+![image](https://user-images.githubusercontent.com/92684210/221366454-b7ae5705-0d90-4963-a18f-89414493b17d.png)
+
+![image](https://user-images.githubusercontent.com/92684210/221366468-83c10bdd-a9a1-4f15-95ec-562f44ca7ffb.png)
+
+![image](https://user-images.githubusercontent.com/92684210/221366483-f5bb84d2-c381-433e-ad71-bfbd78922acf.png)
+
+
